@@ -4,6 +4,7 @@
 ### PowerChain blockchain-based energy trading client frontend
 
 
+
 <p align="left">
    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><br />
    <a href="https://codecov.io/gh/archik408/trading-platform-client"><img src="https://codecov.io/gh/archik408/trading-platform-client/branch/master/graph/badge.svg" alt="Codecov Badge"></a>
@@ -15,7 +16,7 @@
 </p>
 
 ## Introduction
-[Nordic Energy](https://www.nordicenergy.co) is developing the only scalable public-private Blockchain with deletable data features, made for commercial products. Designed with Nordic Energy's P2P energy trading use case, and co-innovated with SAP.
+[Nordic Energy](https://www.nordicenergy.co) is developing the scalable public-private blockchain with deletable data features, made for commercial products. Designed with peer-to-peer energy trading use case, and co-innovated with SAP.
 
 This repository shows the frontend for the energy use case, which is the world's first peer to peer energy trading platform commercially available to a mass market. You can test it at https://powerchain.nordicenergy.co with the credentials demo / demo1234. The Frontend part of its trading platform is built with modern JavaScript, HTML and CSS, but there are some helpers: [React](https://reactjs.org/) as a framework, [Jest](https://jestjs.io/en/) as a testing tool and [Styleguidist](https://react-styleguidist.js.org/) as a source of documentation.
 
