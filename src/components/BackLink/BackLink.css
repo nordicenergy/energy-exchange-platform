@@ -1,0 +1,15 @@
+.back-link {
+    display: inline-block;
+    min-width: 2.125rem;
+    min-height: 2.125rem;
+    max-width: 2.125rem;
+    max-height: 2.125rem;
+}
+
+.back-link:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.back-link:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/

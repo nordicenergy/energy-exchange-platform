@@ -1,0 +1,53 @@
+.configuration-form {
+    box-sizing: border-box;
+    padding: 2em 1em 5.875em;
+    width: 100%;
+    border-radius: 0.25em;
+    background: white;
+    box-shadow: 0 0.25em 1em var(--configuration-form-shadow-color);
+    text-align: left;
+    font-size: 1rem;
+}
+
+.configuration-form > h3 {
+    margin: 0 0 2.9em;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.375em;
+}
+
+.configuration-form > form {
+    margin: 0 auto;
+    max-width: 43.75em;
+    width: 100%;
+}
+
+.configuration-form-field {
+    margin-bottom: 3em;
+}
+
+.select-field--hash .options-list-item {
+    font-size: 1em;
+}
+
+.configuration-form-actions {
+    text-align: center;
+}
+
+.configuration-form-actions > .button {
+    margin-bottom: 0.75em;
+}
+
+.configuration-form-actions > small {
+    color: var(--label-color);
+    font-weight: 700;
+    font-size: 0.75em;
+}
+
+@media (max-width: 767px) {
+    .configuration-form {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+}

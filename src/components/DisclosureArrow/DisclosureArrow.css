@@ -1,0 +1,30 @@
+.disclosure-arrow {
+    width: 3.2em;
+    height: 3.2em;
+    font-size: 0.7rem;
+    line-height: 3.2em;
+
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.disclosure-arrow .disclosure-arrow-border {
+    stroke: var(--button-primary-color);
+}
+
+.disclosure-arrow circle {
+    fill: white;
+}
+
+.disclosure-arrow:focus {
+    outline: none;
+}
+
+.disclosure-arrow:hover .disclosure-arrow-border,
+.disclosure-arrow--expanded .disclosure-arrow-border {
+    stroke: var(--label-color);
+}
+
+.disclosure-arrow--expanded {
+    transform: rotate(90deg);
+}

@@ -1,0 +1,110 @@
+.app-footer {
+    padding: 0 2em;
+    border-top: var(--border-width) solid var(--border-on-light-color);
+    background: white;
+}
+
+.app-footer-layout {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.app-footer address,
+.app-footer nav a {
+    display: flex;
+    align-items: center;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.875rem;
+    font-family: inherit;
+}
+
+.app-footer address {
+    flex: 1;
+    color: var(--label-color);
+    text-align: left;
+}
+
+.app-footer nav {
+    display: flex;
+    justify-content: stretch;
+    height: var(--footer-nav-height);
+}
+
+.app-footer nav a {
+    position: relative;
+    margin-left: 2em;
+}
+
+.app-footer nav a:first-child {
+    margin-left: 0;
+}
+
+.app-footer nav a::before {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0.15em;
+    background: var(--active-item-color);
+    content: '';
+}
+
+.app-footer nav a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.app-footer nav a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.app-footer nav a:hover {
+    outline: none;
+    color: var(--general-text-color);
+    transition: color 0.2s ease-in;
+}
+
+.app-footer nav a.footer-item--active {
+    color: var(--label-color);
+}
+
+.app-footer nav a.footer-item--active::before {
+    width: 100%;
+    transition: 0.2s ease;
+}
+
+@media (max-width: 767px) {
+    .app-footer {
+        padding: 0;
+        border-top: var(--border-width) solid var(--footer-border-color);
+    }
+
+    .app-footer-layout {
+        display: block;
+    }
+
+    .app-footer nav {
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 0.625em;
+        padding-top: 2em;
+    }
+
+    .app-footer nav a {
+        margin-bottom: 1.285em;
+        margin-left: 0;
+    }
+
+    .app-footer nav a::before {
+        content: none;
+    }
+
+    .app-footer address {
+        display: block;
+        padding-top: 1.145em;
+        padding-bottom: 0.57em;
+        border-top: var(--border-width) solid var(--footer-border-color);
+        text-align: center;
+    }
+}

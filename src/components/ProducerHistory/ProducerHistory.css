@@ -1,0 +1,31 @@
+.producer-history {
+    width: 100%;
+    background: white;
+    text-align: left;
+}
+
+.producer-history caption {
+    padding: 0 0 1em;
+    color: black;
+    background: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.producer-history tr td {
+    padding: 1.2em 0 1em 0;
+    border-top: var(--border-width) solid var(--border-on-light-color);
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.producer-history tr td:first-child {
+    color: var(--label-color);
+}
+
+.producer-history tr td:last-child {
+    color: var(--table-text-color);
+}

@@ -1,0 +1,77 @@
+.contract-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    border-left: var(--border-width) solid var(--navigation-bg-color);
+}
+
+.contract-select svg {
+    padding: 1em;
+}
+
+.contract-select-no-contracts-alert {
+    color: var(--error-text-color);
+}
+
+.select-field--contract {
+    background: transparent;
+
+    user-select: none;
+}
+
+.select-field--contract .select-field-layout {
+    border: none;
+}
+
+.select-field--contract .select-field-layout::after {
+    content: none;
+}
+
+.select-field--contract .select-field-input {
+    max-width: 100%;
+}
+
+.select-field--contract .select-control {
+    justify-content: center;
+    height: 4.5rem;
+}
+
+.select-field--contract .select-control-text {
+    margin-right: 0.445em;
+    margin-left: 0.445em;
+    padding-top: 0.195em;
+    width: auto;
+    color: white;
+    text-align: center;
+    transition: 200ms ease-in;
+}
+
+.select-field--contract:hover .select-control-text {
+    color: var(--hover-icon-color);
+}
+
+.select-field--contract .select-field-layout:focus {
+    outline: var(--focused-control-outline);
+}
+
+.select-field--contract .select-field-layout:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.select-field--contract.select-field--focused .select-control-text {
+    color: var(--label-color);
+}
+
+.select-field--contract .select-control .select-control-icon {
+    color: var(--button-success-color);
+    font-size: 0.75em;
+}
+
+.select-field--contract .options-list {
+    border-top: none;
+}
+
+.select-field--contract .options-list-item {
+    justify-content: center;
+}

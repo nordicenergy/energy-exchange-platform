@@ -1,0 +1,98 @@
+.producer-card {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1.125em 1em;
+    min-height: 14.5em;
+    border-bottom: 0.25em solid var(--producer-card-border-color);
+    border-radius: 0.25em;
+    background: var(--producer-card-bg-color) no-repeat center;
+    background-size: cover;
+    color: white;
+    cursor: pointer;
+}
+
+.producer-card-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.producer-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background: black;
+    content: '';
+    opacity: 0.5;
+    transition: opacity 200ms ease-in;
+}
+
+.producer-card:hover::before,
+.producer-card:focus::before {
+    opacity: 0.75;
+}
+
+.producer-card--selected::before {
+    background: var(--producer-card-active-bg-color);
+    opacity: 0.9;
+}
+
+.producer-card-meta,
+.producer-card-name {
+    position: relative;
+    z-index: 1;
+}
+
+.producer-card-name {
+    text-align: center;
+}
+
+.producer-card-name h3 {
+    margin: 0.5em 0 0;
+    font-weight: 600;
+    font-size: 1.375em;
+}
+
+.producer-card-name small {
+    padding: 0.625em 1.375em 0.375em;
+    border-radius: 0.5em;
+    background-color: var(--producer-card-status);
+    color: white;
+
+    font-size: 0.7rem;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.producer-card--selected .producer-card-name small {
+    background-color: white;
+    color: var(--producer-card-status);
+}
+
+.producer-card-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.producer-card-price,
+.producer-card-plant-type {
+    font-weight: 500;
+    font-size: 1.125em;
+}
+
+.producer-card-plant-type {
+    text-transform: capitalize;
+}
+
+@media (max-width: 1599px) {
+    .producer-card {
+        min-height: 12.5em;
+    }
+}

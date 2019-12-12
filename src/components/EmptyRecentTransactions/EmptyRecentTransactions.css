@@ -1,0 +1,28 @@
+.empty-recent-transactions {
+    box-sizing: border-box;
+    padding: 2em 1em 2.1875em;
+    text-align: center;
+    color: black;
+    border-radius: 0.25em;
+    box-shadow: var(--main-boxes-shadow);
+    background: white;
+    font-size: 1rem;
+}
+
+.empty-recent-transactions-title {
+    margin: 0 0 0.86363em;
+    font-size: 1.375em;
+    font-weight: 600;
+}
+
+.empty-recent-transactions-icon {
+    margin: 0 0 0.41667em;
+    color: var(--label-color);
+    font-size: 1.5em;
+}
+
+.empty-recent-transactions-message {
+    margin: 0;
+    color: var(--label-color);
+    font-size: 1.125em;
+}

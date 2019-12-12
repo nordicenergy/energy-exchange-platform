@@ -1,0 +1,36 @@
+.date-field {
+    position: relative;
+    z-index: 1;
+}
+
+.date-field-addon {
+    padding-right: 0.5rem;
+    color: var(--button-primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    will-change: color;
+    transition: color 0.2s ease-in;
+}
+
+.date-field-addon:hover {
+    color: var(--link-color);
+}
+
+.date-field-datepicker {
+    position: absolute;
+    right: 0;
+}
+
+.date-field-datepicker--top {
+    top: -0.5625rem;
+    transform: translateY(-100%);
+}
+
+.date-field-datepicker--bottom {
+    bottom: -0.5625rem;
+    transform: translateY(100%);
+}
+
+.date-field--disabled {
+    pointer-events: none;
+}

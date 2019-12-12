@@ -1,0 +1,151 @@
+.app {
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    height: calc(100% - var(--menu-icon-size));
+}
+
+#main-container {
+    position: relative;
+    display: flex;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--app-bg-color);
+    color: var(--general-text-color);
+    text-align: center;
+    transition: padding-left 0.3s;
+}
+
+#main-container main {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+.main-container--fixed-height main {
+    height: calc(100% - var(--menu-icon-size) - var(--footer-nav-height));
+}
+
+.menu-container {
+    z-index: 8;
+    width: auto;
+    height: 100%;
+    max-width: 100vw;
+    background: white;
+    will-change: width;
+    transition: width 0.4s ease-out;
+}
+
+.right-config-sidebar {
+    display: none;
+    z-index: 11;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    width: 0;
+    height: calc(100% - var(--menu-icon-size));
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: white;
+    will-change: width;
+    transition: width 0.4s ease-out;
+}
+
+.right-config-sidebar .config-items {
+    width: var(--side-bar-width);
+}
+
+.right-config-sidebar .config-contract-select,
+.contract-config-select-no-contracts-alert {
+    padding: 2em;
+    width: auto;
+}
+
+.right-config-sidebar .config-logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.right-config-sidebar .config-logout-btn span {
+    margin-left: 0.5em;
+}
+
+.contract-config-select-no-contracts-alert {
+    color: var(--error-text-color);
+}
+
+.content--de-emphasized::before {
+    display: none;
+    position: absolute;
+    z-index: 7;
+    width: 100%;
+    height: calc(100% - var(--menu-icon-size));
+    background: var(--bar-color);
+    opacity: 0.8;
+    content: '';
+}
+
+@media screen and (max-width: 1023px) {
+    #main-container {
+        padding-left: 4.5rem;
+    }
+
+    .menu-container {
+        position: absolute;
+        overflow: hidden;
+        height: calc(100% - 4.5rem);
+        width: var(--menu-icon-size);
+        background: white;
+    }
+
+    .menu-container .menu-side-bar .menu-item:first-child .menu-item-icon {
+        border-top: var(--border-width) solid var(--border-on-dark-color);
+    }
+
+    .covered-by-menu.content--de-emphasized::before {
+        display: block;
+    }
+
+    .menu-container--opened {
+        width: var(--side-bar-width);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #main-container {
+        padding: 0;
+    }
+
+    .main-container--fixed-height main {
+        height: inherit;
+    }
+
+    .menu-container {
+        width: 0;
+    }
+
+    .menu-container--opened {
+        width: var(--side-bar-width);
+    }
+
+    .right-config-sidebar {
+        display: block;
+        width: 0;
+    }
+
+    .covered-by-config-sidebar.content--de-emphasized::before {
+        display: block;
+    }
+
+    .right-config-sidebar--opened {
+        width: var(--side-bar-width);
+    }
+}

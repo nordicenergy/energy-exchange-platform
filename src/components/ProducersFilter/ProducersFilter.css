@@ -1,0 +1,111 @@
+.producers-filter {
+    display: flex;
+    box-sizing: border-box;
+    padding: var(--page-paddings);
+    padding-bottom: 1rem;
+    width: 100%;
+    border-top: var(--border-width) solid var(--geyser-color);
+    border-bottom: var(--border-width) solid var(--geyser-color);
+    background: var(--producers-filter-bg-color);
+    color: #212121;
+    font-size: 1rem;
+}
+
+.producers-filter-meta {
+    padding-right: 2.5em;
+}
+
+.producers-filter-meta > strong {
+    white-space: nowrap;
+    line-height: 2.5;
+}
+
+.producers-filter-open-button,
+.producers-filter-close-button {
+    display: none;
+}
+
+.producers-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producers-filter-option {
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 767px) {
+    .producers-filter {
+        display: block;
+        padding: 1rem;
+    }
+
+    .producers-filter-meta {
+        padding: 0;
+    }
+
+    .producers-filter-meta > strong {
+        display: none;
+    }
+
+    .producers-filter-open-button,
+    .producers-filter-close-button {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        background: none;
+
+        appearance: none;
+    }
+
+    .producers-filter-open-button {
+        width: 100%;
+        height: 3.428em;
+        border: 2px solid var(--button-primary-color);
+        border-radius: 0.285em;
+        color: var(--button-primary-color);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.875em;
+    }
+
+    .producers-filter-open-button > .svg-inline--fa {
+        margin-right: 0.572em;
+    }
+
+    .producers-filter-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        padding: 5.5rem 1rem 0;
+        background: var(--loading-bg-color);
+        text-align: right;
+        opacity: 0;
+        transition-duration: 200ms;
+        pointer-events: none;
+    }
+
+    .producers-filter-backdrop--visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .producers-filter-close-button {
+        margin-bottom: 1em;
+        width: 1em;
+        height: 1em;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .producers-filter-options {
+        display: block;
+        text-align: left;
+    }
+}

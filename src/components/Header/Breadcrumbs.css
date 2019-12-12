@@ -1,0 +1,60 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding-right: 1em;
+    font-size: 1rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: var(--breadcrumb-item-color);
+}
+
+.breadcrumb-item a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.breadcrumb-item a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.breadcrumb-item a {
+    cursor: pointer;
+    color: inherit;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: white;
+}
+
+.icon-breadcrumb {
+    display: block;
+    font-size: 1.375rem;
+    line-height: 1em;
+}
+
+.breadcrumb {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.57em;
+}
+
+.current-item {
+    color: var(--breadcrumb-current-item-color);
+}
+
+.breadcrumb-arrow {
+    margin-left: 1.125em;
+    margin-right: 0.75em;
+    color: var(--breadcrumb-arrow-color);
+}
+
+@media screen and (max-width: 1023px) {
+    .breadcrumbs {
+        display: none;
+    }
+}

@@ -1,0 +1,20 @@
+.navigation-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5em;
+}
+
+.navigation-cards .nav-card-container {
+    flex: 0 0 31.15%;
+}
+
+@media screen and (max-width: 767px) {
+    .navigation-cards {
+        flex-direction: column;
+    }
+
+    .navigation-cards .nav-card-container {
+        margin: 0.5rem 0;
+        flex: 1 0 auto;
+    }
+}

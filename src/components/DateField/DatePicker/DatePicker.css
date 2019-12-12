@@ -1,0 +1,198 @@
+.date-picker {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1.75em 1em;
+    max-width: 100%;
+    width: 20.5rem;
+    border: var(--border-width) solid var(--input-border-color);
+    border-radius: 0.25em;
+    background: white;
+    box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+}
+
+.date-picker::after,
+.date-picker::before {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: '';
+}
+
+.date-picker::before {
+    right: 0.5rem;
+}
+
+.date-picker::after {
+    right: 0.5625rem;
+}
+
+.date-picker.date-picker--top::before {
+    bottom: -0.5625rem;
+    border-width: 0.5625rem 0.5625rem 0 0.5625rem;
+    border-color: var(--input-border-color) transparent transparent transparent;
+}
+
+.date-picker.date-picker--top::after {
+    bottom: -0.5rem;
+    border-width: 0.5rem 0.5rem 0 0.5rem;
+    border-color: white transparent transparent transparent;
+}
+
+.date-picker.date-picker--bottom::before {
+    top: -0.5625rem;
+    border-width: 0 0.5625rem 0.5625rem 0.5625rem;
+    border-color: transparent transparent var(--input-border-color) transparent;
+}
+
+.date-picker.date-picker--bottom::after {
+    top: -0.5rem;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-color: transparent transparent white transparent;
+}
+
+.date-picker .pickmeup {
+    margin-bottom: 1em;
+}
+
+.date-picker .pmu-prev,
+.date-picker .pmu-next {
+    display: block;
+    width: 0.5rem;
+    height: 0.875rem;
+    background: url('arrow.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.date-picker .pmu-prev {
+    transform: rotate(-180deg);
+}
+
+.date-picker .pmu-month {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.date-picker .pmu-day-of-week,
+.date-picker .pmu-days,
+.date-picker .pmu-months,
+.date-picker .pmu-years {
+    display: none;
+}
+
+.date-picker .pmu-view-years .pmu-years,
+.date-picker .pmu-view-months .pmu-months {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date-picker .pmu-years > *,
+.date-picker .pmu-months > * {
+    flex: 25%;
+    margin: 0.5rem 0;
+    height: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.date-picker .pmu-years > *.pmu-selected,
+.date-picker .pmu-months > *.pmu-selected {
+    border-radius: 0.25rem;
+    background: var(--button-primary-color);
+    color: white;
+}
+
+.date-picker .pmu-instance > nav:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.date-picker .pmu-view-days .pmu-day-of-week {
+    display: flex;
+    margin-bottom: 1.125em;
+}
+
+.date-picker .pmu-day-of-week > * {
+    width: 14.285%;
+    color: var(--label-color);
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75em;
+}
+
+.date-picker .pmu-view-days .pmu-days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date-picker .pmu-days > * {
+    box-sizing: border-box;
+    margin: 0.285em calc((14.285% - 2em) / 2);
+    padding-top: 0.145em;
+    width: 2em;
+    height: 1.715em;
+    border-radius: 0.285em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.875em;
+    line-height: 1.715em;
+    cursor: pointer;
+}
+
+.date-picker .pmu-days > *.pmu-not-in-month {
+    color: var(--label-color);
+}
+
+.date-picker .pmu-days > *:hover {
+    background: var(--datepicker-hov-day-color);
+}
+
+.date-picker .pmu-days > *.pmu-today {
+    background: var(--datepicker-today-color);
+    color: white;
+}
+
+.date-picker .pmu-days > *.pmu-selected {
+    background: var(--datepicker-selected-day-color);
+    color: white;
+}
+
+.date-picker .date-picker-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date-picker-actions > button {
+    margin-right: 2.5rem;
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--blumine-color);
+    font-weight: 600;
+    cursor: pointer;
+
+    appearance: none;
+}
+
+.date-picker-actions > button:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.date-picker-actions > button:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.date-picker-actions > button:hover {
+    background: var(--datepicker-hov-day-color);
+}
+
+.date-picker-actions > button:last-child {
+    margin-right: 0;
+}

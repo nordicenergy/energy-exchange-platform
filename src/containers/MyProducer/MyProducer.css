@@ -1,0 +1,58 @@
+.my-producer-page-info-container {
+    padding: var(--page-paddings);
+    background: white;
+}
+
+.my-producer-page-info-container > h1 {
+    margin: 0 0 1em 0;
+    padding: 0;
+    color: black;
+    font-size: 1.625rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.my-producer-page-info-container > h1 > .back-link {
+    display: none;
+}
+
+.my-producer-page-controls {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 1.5em 1em;
+    text-align: left;
+}
+
+.my-producer-page-controls button {
+    margin: 0.5em 1.5em 0.5em 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .my-producer-page-info-container > h1 {
+        display: flex;
+        align-items: center;
+        font-size: 1.375rem;
+    }
+
+    .my-producer-page-info-container > h1 > .back-link {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .my-producer-page-info-container > h1 > span {
+        flex: 1;
+        padding-top: 0.25em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .my-producer-page-controls {
+        padding: 1em;
+    }
+
+    .my-producer-page-controls button {
+        margin: 0.5em 0;
+        width: 100%;
+    }
+}

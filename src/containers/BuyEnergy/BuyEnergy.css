@@ -1,0 +1,106 @@
+.buy-energy-page {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+}
+
+.buy-energy-page-header,
+.buy-energy-page-filters,
+.buy-energy-page-producers {
+    box-sizing: border-box;
+    padding: 2rem 1.5rem 2rem 2rem;
+    width: 100%;
+}
+
+.buy-energy-page-header {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.buy-energy-page-header > * {
+    margin: 0;
+    padding: 0;
+}
+
+.buy-energy-page-header > h1 {
+    padding-top: 0.1em;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.625em;
+}
+
+.buy-energy-page-header > h1 > .back-link {
+    display: none;
+}
+
+.buy-energy-page-header > h2 {
+    padding-top: 0.25em;
+    padding-left: 1em;
+    color: var(--label-color);
+    font-weight: 600;
+    font-size: 1.375em;
+}
+
+.buy-energy-page-header > h2 > strong {
+    color: var(--general-text-color);
+    font-weight: inherit;
+}
+
+.buy-energy-page-producers {
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+
+@media (max-width: 1023px) {
+    .buy-energy-page-header {
+        display: block;
+    }
+
+    .buy-energy-page-header > h1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75em;
+        padding: 0;
+        width: 100%;
+        font-size: 1.375em;
+    }
+
+    .buy-energy-page-header > h2 {
+        padding: 0;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    .buy-energy-page-header > h1 > .back-link {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .buy-energy-page-header > h1 > span {
+        padding-top: 0.25em;
+    }
+
+    .buy-energy-page-header > h2 > strong {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .buy-energy-page-header,
+    .buy-energy-page-filters,
+    .buy-energy-page-producers {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .buy-energy-page {
+        flex: 1 1 auto;
+    }
+}

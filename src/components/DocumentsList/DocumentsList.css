@@ -1,0 +1,131 @@
+.document-list-container {
+    font-size: 1.125rem;
+    background-color: white;
+    padding: 1.78em 2em 0;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: var(--main-boxes-shadow);
+    border-radius: 0.25em;
+}
+
+.document-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.document-list-container td {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--table-text-color);
+    padding: 0.6em 0 0.4em;
+}
+
+.document-list-container tr + tr {
+    border-top: var(--border-width) solid var(--border-on-light-color);
+}
+
+.document-list-container td:first-child {
+    width: 15%;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.document-list-container td:nth-child(2) {
+    width: 50%;
+    text-align: center;
+}
+
+.document-list-container td:nth-child(2) a {
+    text-decoration: none;
+    color: var(--general-text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.document-list-container td:nth-child(2) a:hover {
+    color: var(--table-control-hover-color);
+}
+
+.document-list-container td:nth-child(2) a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.document-list-container td:nth-child(2) a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.document-list-container td:last-child {
+    width: 10%;
+    text-align: right;
+    text-align: -webkit-right;
+    padding-left: 2rem;
+}
+
+.document-list-container td:last-child a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.document-list-container td:last-child a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.document-list-container td:last-child a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.document-list-loader {
+    text-align: center;
+    padding: 1em;
+}
+
+.document-download-icon {
+    width: 2.1em;
+    height: 2.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: var(--border-width) solid var(--table-control-border-color);
+    color: var(--download-icon-color);
+}
+
+.document-download-icon:hover svg {
+    color: var(--table-control-hover-color);
+}
+
+.document-list-row--disabled td:nth-child(2) a,
+.document-list-row--disabled td:last-child a {
+    color: var(--table-control-hover-color);
+    cursor: not-allowed;
+}
+
+.document-list-row--disabled .document-download-icon svg {
+    color: var(--table-control-hover-color);
+}
+
+@media (max-width: 767px) {
+    .document-list-container,
+    .document-list-row,
+    .document-list-row td:nth-child(n) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .document-list-row td:nth-child(n) {
+        padding-bottom: 1em;
+    }
+
+    .document-list-row td:first-child {
+        padding-top: 1em;
+    }
+
+    .document-list-row:last-child td:last-child {
+        padding-bottom: 0;
+    }
+}

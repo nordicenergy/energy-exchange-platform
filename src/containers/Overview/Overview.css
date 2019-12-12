@@ -1,0 +1,7 @@
+.overview-page {
+    padding: var(--page-paddings);
+}
+
+.alert--overview {
+    margin-bottom: 2.5rem;
+}

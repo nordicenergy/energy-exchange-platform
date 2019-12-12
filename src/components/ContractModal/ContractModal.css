@@ -1,0 +1,82 @@
+@keyframes show-contract-modal {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-1rem);
+    }
+}
+
+.contract-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: var(--loading-bg-color);
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.3s;
+}
+
+.contract-modal-container--show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.contract-modal {
+    position: static;
+    width: 35em;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0.25em;
+    background: white;
+    font-size: 1rem;
+}
+
+.contract-modal-container > .contract-modal {
+    animation: show-contract-modal 0.2s linear forwards;
+}
+
+.contract-modal-message {
+    display: block;
+    padding: 1.625em 2.625em;
+    margin-bottom: 1em;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    color: var(--table-text-color);
+    background: white;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.contract-modal-actions {
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    background: white;
+}
+
+.contract-modal-actions > .contract-modal-select {
+    flex: 1;
+    padding: 2em 5em;
+}
+
+.contract-modal-actions > .contract-modal-select:focus {
+    outline: var(--focused-control-outline);
+}
+
+.contract-modal-actions > .contract-modal-select:focus:not(:focus-visible) {
+    outline: none;
+}

@@ -1,0 +1,41 @@
+image: node:9.9
+
+pipelines:
+    branches: # Automated triggers on commits to branches
+        master: # -- When committing to master branch auto-deploy to production environment
+            - step:
+                  script:
+                      - export CI=false
+                      - npm install
+                      - npm test
+                      - npm run build
+                      - npm run styleguide:build
+                      - mkdir build/docs
+                      - cp -r styleguide/* build/docs
+                      - git describe --abbrev=12 --always --dirty=+ >build/VERSION_GIT
+                      - ssh ec2-user@powerchain.nordicenergy.co "rm -rf /var/www/html_tmp/*"
+                      - scp -r build/. ec2-user@powerchain.nordicenergy.co:/var/www/html_tmp
+                      - ssh ec2-user@powerchain.nordicenergy.co "rm -rf /var/www/html/*; cp -r /var/www/html_tmp/. /var/www/html/"
+                      - ssh ec2-user@powerchain.nordicenergy.co sudo systemctl reload httpd
+        staging: # -- When committing to staging branch auto-deploy to staging environment
+            - step:
+                  script:
+                      - export CI=false
+                      - npm install
+                      - npm test
+                      - npm run build
+                      - npm run styleguide:build
+                      - mkdir build/docs
+                      - cp -r styleguide/* build/docs
+                      - git describe --abbrev=12 --always --dirty=+ >build/VERSION_GIT
+                      - ssh ec2-user@powerchain.nordicenergy.co "rm -rf /var/www/html_tmp/*"
+                      - scp -r build/. ec2-user@powerchain.nordicenergy.co:/var/www/html_tmp
+                      - ssh ec2-user@powerchain.nordicenergy.co "rm -rf /var/www/html/*; cp -r /var/www/html_tmp/. /var/www/html/"
+                      - ssh ec2-user@powerchain.nordicenergy.co sudo systemctl reload httpd
+    custom: # Pipelines that are triggered manually
+        test_ssh:
+            - step:
+                  name: ssh access to prod/powerchain test
+                  script:
+                      - ssh ec2-user@prod.nordicenergy.co -x "exit"
+                      - ssh ec2-user@powerchain.nordicenergy.co -x "exit"

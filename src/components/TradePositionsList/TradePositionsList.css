@@ -1,0 +1,86 @@
+.trade-positions-list {
+    padding: 2em 1.5em;
+    border-radius: 0.25em;
+    background: white;
+    box-shadow: 0 0.25em 1em rgba(217, 224, 229, 0.3);
+    text-align: left;
+    font-size: 1rem;
+}
+
+.trade-positions-list-layout {
+    margin: 0 auto;
+    max-width: 70em;
+    width: 100%;
+}
+
+.trade-positions-list-layout > h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1.45em;
+    font-weight: 600;
+    font-size: 1.375em;
+}
+
+.trade-positions-list-layout > h3 > span {
+    margin-left: 0.5em;
+    padding-top: 0.3em;
+}
+
+.trade-positions-list-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.25em;
+}
+
+.trade-positions-list-toolbar > .text-field,
+.trade-positions-list-toolbar > .date-field {
+    flex: 0 0 48%;
+}
+
+.trade-positions-list-sort-toolbar {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    padding-top: 1.5em;
+}
+
+.trade-positions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.trade-position-data a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.trade-position-data a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.trade-positions > * {
+    margin-bottom: 0.5em;
+}
+
+.trade-positions > *:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .trade-positions-list {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .trade-positions-list-layout > h3 {
+        font-size: 1em;
+    }
+
+    .trade-positions-list-toolbar > .text-field,
+    .trade-positions-list-toolbar > .date-field {
+        flex: 0 0 100%;
+        margin-bottom: 1em;
+    }
+}

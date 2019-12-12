@@ -1,0 +1,62 @@
+.submit-meter-readings-page {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.submit-meter-readings-page > section {
+    width: 70%;
+    box-sizing: inherit;
+    padding: var(--page-paddings);
+}
+
+.submit-meter-readings-page > aside {
+    width: 30%;
+    box-sizing: inherit;
+    border-left: var(--border-width) solid var(--border-on-light-color);
+}
+
+.submit-meter-readings-page > aside p {
+    padding: 1em;
+}
+
+.submit-meter-readings-page section > h1 {
+    margin: 0 0 1em 0;
+    padding: 0;
+    color: black;
+    font-size: 1.625em;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+    .submit-meter-readings-page {
+        flex-direction: column;
+    }
+
+    .submit-meter-readings-page > section {
+        width: 100%;
+    }
+
+    .submit-meter-readings-page > aside {
+        width: 100%;
+        border-left: none;
+    }
+
+    .submit-meter-readings-page > h1 {
+        font-size: 1.375em;
+    }
+
+    #reading-history-container {
+        height: 20em;
+    }
+}
+
+#reading-history-container {
+    overflow-y: auto;
+}

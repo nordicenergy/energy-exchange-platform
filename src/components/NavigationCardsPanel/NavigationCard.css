@@ -1,0 +1,105 @@
+.nav-card-container {
+    --transition-duration: 0.2s;
+    --transition-function: ease-in;
+    padding: 2.125rem 0 1.625rem;
+    flex-basis: 19rem;
+    min-width: 10rem;
+    border-radius: 0.25rem;
+    background: white;
+    cursor: pointer;
+    transition: var(--transition-duration) var(--transition-function);
+}
+
+.nav-card-container:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.nav-card-container:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.nav-card-container:hover {
+    color: white;
+    background-color: var(--navigation-bg-color);
+}
+
+.nav-card-container--disabled {
+    --transition-duration: 0;
+    opacity: 0.4;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.nav-card-container--disabled:hover {
+    background: white;
+    color: inherit;
+}
+
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-card-title-container {
+    margin: 2rem 0 0;
+}
+
+.nav-card-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+}
+
+.nav-card-container svg .fillArea {
+    transition: var(--transition-duration) var(--transition-function);
+}
+
+.nav-card-container svg .strokeLine {
+    transition: var(--transition-duration) var(--transition-function);
+}
+
+.nav-card-container:hover svg .fillArea {
+    opacity: 0.3;
+    fill: white;
+}
+.nav-card-container:hover svg .strokeLine {
+    stroke: white;
+}
+
+.nav-card-container--disabled:hover svg .fillArea {
+    opacity: 1;
+    fill: var(--navigation-card-svg-fill-color);
+}
+
+.nav-card-container--disabled:hover svg .strokeLine {
+    stroke: var(--navigation-card-svg-stroke-color);
+}
+
+@media screen and (max-width: 767px) {
+    .nav-card-container {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .nav-card {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav-card-title-container {
+        margin: 0 0 0 1em;
+    }
+
+    .nav-card-title {
+        text-align: left;
+    }
+
+    .nav-card-container svg {
+        width: 5rem;
+        height: 5rem;
+    }
+}

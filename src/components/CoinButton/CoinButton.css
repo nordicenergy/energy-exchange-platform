@@ -1,0 +1,39 @@
+.coin-button {
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    border: none;
+    border-radius: 0.25em;
+    background-color: var(--button-primary-color);
+    box-shadow: 0 0.25em 1em 0 var(--coin-button-shadow-color);
+
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+.coin-button span {
+    padding: 2.5em 0 2.4em;
+    width: 10.7em;
+    color: white;
+    font-size: 1.375rem;
+    line-height: 1.5;
+    text-align: center;
+    will-change: background;
+    transition: background 0.2s ease-in;
+}
+
+.coin-button span:first-child {
+    font-weight: 600;
+}
+
+.coin-button span:last-child {
+    background-color: var(--coin-button-bg-color);
+    border-left: var(--border-width) solid var(--coin-button-border-color);
+    font-weight: normal;
+}
+
+.coin-button:hover span:first-child,
+.coin-button:hover span:last-child {
+    background-color: var(--button-hover-color);
+}

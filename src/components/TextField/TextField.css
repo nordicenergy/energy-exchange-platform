@@ -1,0 +1,215 @@
+@keyframes auto-fill {
+    to {
+        background: none;
+        color: var(--bar-color);
+    }
+}
+
+@keyframes auto-fill-dark {
+    to {
+        background: none;
+        color: white;
+    }
+}
+
+.text-field {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: var(--label-color);
+    text-align: left;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.text-field--disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.text-field-layout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.5em;
+    border-bottom: 0.062em solid var(--input-border-color);
+}
+
+.text-field-layout::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.062rem;
+    display: block;
+    width: 66%;
+    height: 0.125rem;
+    content: '';
+    transform: scaleX(0);
+}
+
+.text-field--focused .text-field-layout::after {
+    background: linear-gradient(to right, var(--hover-icon-color), var(--active-item-color));
+    transition-duration: 200ms;
+    transform: scaleX(1);
+}
+
+.text-field--error .text-field-layout::after {
+    background: var(--error-text-color);
+    transform: scaleX(1);
+}
+
+.text-field-label {
+    overflow: hidden;
+    flex: 0 0 34%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 0.875em;
+}
+
+.text-field-asterisk {
+    top: -0.1em;
+    color: var(--error-text-color);
+    font-size: 85%;
+}
+
+.text-field-input-group {
+    display: flex;
+    align-items: center;
+    flex: 0 0 66%;
+    border: none;
+}
+
+.text-field-input {
+    flex: 1;
+    box-sizing: border-box;
+    padding-right: 0;
+    padding-left: 0;
+    min-width: 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--bar-color);
+    font-weight: 600;
+    font-size: 1.125em;
+
+    appearance: none;
+}
+
+.text-field--dark .text-field-input {
+    color: white;
+}
+
+.text-field-input:-webkit-autofill {
+    animation-name: auto-fill;
+
+    animation-fill-mode: both;
+}
+
+.text-field--dark .text-field-input:-webkit-autofill {
+    animation-name: auto-fill-dark;
+
+    animation-fill-mode: both;
+}
+
+.text-field-addon {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875em;
+}
+
+.text-field-helper-text {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0.25rem 0 0;
+    padding-left: 34%;
+    font-weight: 700;
+    font-size: 0.75em;
+}
+
+.text-field-error {
+    position: relative;
+    margin-top: 1rem;
+    padding: 1em 2em;
+    border: 1px solid var(--error-border-light-color);
+    background: transparent;
+    color: var(--error-text-color);
+    font-weight: 700;
+    font-size: 0.75em;
+    line-height: 1.4;
+}
+
+.text-field-error::before,
+.text-field-error::after {
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    width: 0;
+    height: 0;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent var(--error-border-light-color) transparent;
+    content: '';
+}
+
+.text-field-error::after {
+    top: -0.375rem;
+    border-bottom-color: white;
+}
+
+.text-field--dark .text-field-error {
+    border-color: var(--error-border-dark-color);
+}
+
+.text-field--dark .text-field-error::before {
+    border-bottom-color: var(--error-border-dark-color);
+}
+
+.text-field--dark .text-field-error::after {
+    border-bottom-color: var(--bar-color);
+}
+
+.text-field--multiline .text-field-layout {
+    display: block;
+    height: auto;
+}
+
+.text-field--multiline .text-field-label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.text-field--multiline .text-field-layout::after {
+    width: 100%;
+}
+
+.text-field--multiline .text-field-input {
+    min-height: 3.375em;
+}
+
+@media (max-width: 767px) {
+    .text-field-layout {
+        display: block;
+        height: auto;
+    }
+
+    .text-field-layout::after {
+        width: 100%;
+    }
+
+    .text-field-label {
+        font-size: 0.75em;
+    }
+
+    .text-field-input {
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 1em;
+    }
+
+    .text-field-helper-text {
+        margin-top: 0.75em;
+        padding-left: 0;
+    }
+}

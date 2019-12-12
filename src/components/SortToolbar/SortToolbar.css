@@ -1,0 +1,13 @@
+.sort-toolbar {
+    font-size: 1rem;
+}
+
+.sort-toolbar > * {
+    margin: 0 0.5em;
+}
+
+.sort-toolbar-title {
+    color: var(--general-dark-text-color);
+    font-weight: 700;
+    font-size: 0.75em;
+}

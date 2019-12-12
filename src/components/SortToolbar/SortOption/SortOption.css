@@ -1,0 +1,40 @@
+.sort-option {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 0.1em;
+    height: 1.5em;
+    outline: none;
+    border: none;
+    border-radius: 0.3em;
+    background-color: transparent;
+    color: var(--general-text-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    cursor: pointer;
+    transition: 150ms;
+
+    user-select: none;
+    appearance: none;
+}
+
+.sort-option:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.sort-option:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.sort-option:hover {
+    background-color: var(--athens-gray-color);
+}
+
+.sort-option--active {
+    color: var(--active-item-color);
+}
+
+.sort-option .svg-inline--fa {
+    margin-left: 0.25em;
+}

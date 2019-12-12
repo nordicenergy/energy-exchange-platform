@@ -1,0 +1,139 @@
+.profile-form {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.profile-form-tab-list {
+    display: flex;
+    height: 3em;
+    padding: 0 2em;
+    background: var(--app-bg-color);
+}
+
+.profile-form-tab-list > button {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0.25em 0 0;
+    cursor: pointer;
+    color: var(--button-primary-color);
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1em;
+    font-weight: 600;
+    will-change: color;
+    transition: color 0.2s ease-in;
+    appearance: none;
+}
+
+.profile-form-tab-list > button:hover {
+    color: var(--link-color);
+}
+
+.profile-form-tab-list > button[aria-selected='true'] {
+    padding-top: 0.375em;
+    color: var(--label-color);
+    border-bottom: 0.125em solid var(--active-item-color);
+}
+
+.profile-form-tab-list > button:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.profile-form-tab-list > button:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.profile-form-tab-list > button + button {
+    margin-left: 2.5em;
+}
+
+.profile-form-tab-errors-feedback {
+    padding: 0.2em;
+    color: var(--error-text-color);
+}
+
+.profile-form-tab-panel {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 38.625em;
+    padding: 2em 2em 0;
+    outline: none;
+}
+
+.profile-form * + .text-field,
+.profile-form * + .date-field,
+.profile-form * + .iban-field,
+.profile-form * + .profile-form-payment-method {
+    margin-top: 3.5em;
+}
+
+.profile-form-payment-method > strong,
+.profile-form-sepa-approval > strong {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.857em;
+    color: var(--label-color);
+    font-size: 0.875em;
+}
+
+.profile-form-payment-method > ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.profile-form-payment-method > ul li {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.profile-form-sepa-approval {
+    margin: 3.5em 0 0;
+}
+
+.profile-form-sepa-approval > small {
+    display: block;
+    padding: 1em 0 0 2.833em;
+    color: var(--label-color);
+    font-size: 0.75em;
+}
+
+.profile-form-bitcoin-message > strong {
+    display: block;
+    padding: 2em 0 0 2.833em;
+    color: var(--label-color);
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+.profile-form-actions {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3.5em 2em 0;
+}
+
+@media (max-width: 767px) {
+    .profile-form-payment-method > ul {
+        flex-direction: column-reverse;
+    }
+
+    .profile-form-payment-method > ul li {
+        margin-bottom: 2em;
+    }
+
+    .profile-form-tab-list {
+        height: 5em;
+    }
+
+    .profile-form-tab-list button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

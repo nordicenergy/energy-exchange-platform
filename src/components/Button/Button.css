@@ -1,0 +1,57 @@
+.button {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1rem;
+    width: 18rem;
+    max-width: 100%;
+    height: 3.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 0.5rem var(--button-shadow-color);
+    color: white;
+    text-overflow: ellipsis;
+    text-shadow: 0.055em 0.055em 0 var(--button-text-shadow-color);
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 3.5rem;
+    cursor: pointer;
+    transition: background 200ms;
+
+    outline: none;
+    appearance: none;
+}
+
+.button.button-primary {
+    background: var(--button-primary-color);
+}
+
+.button.button-success {
+    background: var(--button-success-color);
+}
+
+.button:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.button:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.button:hover {
+    background: var(--button-hover-color);
+    box-shadow: 0 0.25rem 0.5rem var(--button-shadow-color);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button.button-primary:disabled {
+    background: var(--button-primary-hov-color);
+}
+
+.button.button-success:disabled {
+    background: var(--button-success-hov-color);
+}

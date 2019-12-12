@@ -1,0 +1,23 @@
+.number-field {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.number-field-input {
+    flex: 1;
+    min-width: 0;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+.number-field-input::-webkit-outer-spin-button,
+.number-field-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

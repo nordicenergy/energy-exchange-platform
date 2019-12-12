@@ -1,0 +1,40 @@
+.about-page {
+    height: 100%;
+    text-align: left;
+    background-color: white;
+    box-sizing: border-box;
+    padding: var(--page-paddings);
+    flex: 1 1 auto;
+}
+
+.about-page > h1 {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1.625rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.about-info-container {
+    width: 65%;
+}
+
+.about-page p {
+    color: var(--about-us-info-text-color);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+@media (max-width: 1279px) {
+    .about-info-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-page > h1 {
+        font-size: 1.375rem;
+    }
+}

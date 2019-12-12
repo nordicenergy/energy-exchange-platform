@@ -1,0 +1,61 @@
+.terms-and-conditions-page {
+    height: 100%;
+    text-align: left;
+    background-color: white;
+    box-sizing: border-box;
+    padding: var(--page-paddings);
+    flex: 1 1 auto;
+}
+
+.terms-and-conditions-page > h1 {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1.625rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.terms-and-conditions-info-container {
+    width: 65%;
+}
+.terms-and-conditions-page p {
+    color: var(--about-us-info-text-color);
+    font-size: 1rem;
+    line-height: 2;
+    overflow-wrap: break-word;
+}
+
+.terms-and-conditions-page p a {
+    color: var(--link-color);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.3s ease-out;
+    word-break: break-all;
+}
+
+.terms-and-conditions-page p a:hover {
+    color: var(--general-text-color);
+}
+
+.terms-and-conditions-page p a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.terms-and-conditions-page p a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+@media (max-width: 1279px) {
+    .terms-and-conditions-info-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .terms-and-conditions-page > h1 {
+        font-size: 1.375rem;
+    }
+}

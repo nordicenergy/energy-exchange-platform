@@ -1,0 +1,56 @@
+.direct-trading-page {
+    padding: var(--page-paddings);
+}
+
+.direct-trading-page > h1 {
+    margin: 0 0 0.25em 0;
+    padding: 0;
+    color: black;
+    font-size: 1.625rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.direct-trading-page > h2 {
+    margin: 0 0 1.625em 0;
+    padding: 0;
+    color: var(--page-subheader-color);
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.direct-trading-page .meta-mask-alert .meta-mask-alert-dialog {
+    margin-top: var(--menu-icon-size);
+    margin-left: var(--side-bar-width);
+}
+
+@media screen and (max-width: 1023px) {
+    .direct-trading-page .meta-mask-alert .meta-mask-alert-dialog {
+        margin-left: var(--menu-icon-size);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .direct-trading-page > h1 {
+        font-size: 1.375rem;
+    }
+
+    .direct-trading-page > h2 {
+        font-size: 0.875rem;
+    }
+
+    .direct-trading-page .meta-mask-alert .meta-mask-alert-dialog {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .direct-trading-page .meta-mask-alert {
+        overflow: scroll;
+        padding-top: 4.5rem;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,31 @@
+.long-press-button {
+    box-sizing: border-box;
+    padding: 0.1875rem 0.035rem 0 0;
+    min-width: 2.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: var(--button-primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1875rem;
+    cursor: pointer;
+    transition: 200ms;
+
+    user-select: none;
+    appearance: none;
+}
+
+.long-press-button:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.long-press-button:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.long-press-button:hover {
+    background: var(--button-hover-color);
+}

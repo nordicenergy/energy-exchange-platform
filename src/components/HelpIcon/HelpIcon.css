@@ -1,0 +1,55 @@
+.help-icon {
+    position: relative;
+    box-sizing: border-box;
+    cursor: help;
+}
+
+.help-icon .fa-question-circle {
+    width: 1.9em;
+    height: 1.9em;
+    color: var(--button-hover-color);
+    font-size: 0.775rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.help-icon .help-tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 1.3em);
+    left: calc(50% - 12em);
+    width: 24em;
+    padding: 0.75em 1.6em;
+    box-sizing: border-box;
+    border: var(--border-width) solid var(--border-on-light-color);
+    border-radius: 0.25em;
+    background-color: white;
+    box-shadow: 0 -0.08em 0.33em 0 var(--tooltip-shadow-color);
+    color: var(--label-color);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.help-icon .help-tooltip::before,
+.help-icon .help-tooltip::after {
+    position: absolute;
+    bottom: -0.6em;
+    left: calc(50% - 0.6em);
+    width: 0;
+    height: 0;
+    border-width: 0.6em 0.6em 0 0.6em;
+    border-style: solid;
+    border-color: var(--border-on-light-color) transparent transparent transparent;
+    content: '';
+}
+
+.help-icon .help-tooltip::after {
+    bottom: -0.5em;
+    border-top-color: white;
+}
+
+.help-icon:hover .help-tooltip {
+    display: block;
+}

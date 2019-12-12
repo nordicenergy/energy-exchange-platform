@@ -1,0 +1,91 @@
+.recent-transactions-details {
+    padding: 1.25rem 3rem 0.5rem;
+}
+
+.recent-transactions-details *[role='columnheader'] {
+    color: var(--label-color);
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.recent-transactions-details a {
+    color: var(--button-primary-color);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s ease-out;
+}
+
+.recent-transactions-details a:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.recent-transactions-details a:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.recent-transactions-details a:hover {
+    color: var(--button-primary-hov-color);
+}
+
+.recent-transactions-details-hash {
+    padding: 0.5rem calc(10% - 3rem) 0.5rem 0;
+}
+
+.recent-transactions-details-hash > div[role='columnheader'] {
+    padding-left: calc(10% - 3rem);
+    padding-top: 0.5rem;
+    border-top: var(--border-width) solid var(--border-on-light-color);
+    text-align: center;
+}
+
+.recent-transactions-details-hash > div:last-child {
+    padding: 0.5rem 0 1.25rem calc(10% - 3rem);
+    font-size: 1rem;
+    text-align: center;
+    word-break: break-all;
+}
+
+.recent-transactions-details-values {
+    display: flex;
+}
+
+.recent-transactions-details-values > div[role='row'] {
+    box-sizing: border-box;
+    padding-top: 0.5em;
+}
+
+.recent-transactions-details-values > div[role='row']:first-child {
+    width: 25%;
+    text-align: left;
+}
+
+.recent-transactions-details-values > div[role='row']:nth-child(2),
+.recent-transactions-details-values > div[role='row']:nth-child(3) {
+    width: 25%;
+    text-align: center;
+}
+
+.recent-transactions-details-values > div[role='row']:last-child {
+    width: 25%;
+    padding-right: calc(10% - 3rem);
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .recent-transactions-details div.recent-transactions-details-values {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recent-transactions-details div.recent-transactions-details-values > div[role='row'] {
+        width: auto;
+        text-align: center;
+    }
+
+    .recent-transactions-details .recent-transactions-details-hash > div[role='columnheader'] {
+        border: none;
+    }
+}

@@ -1,0 +1,73 @@
+.language-select {
+    width: 7em;
+    border-left: var(--border-width) solid var(--navigation-bg-color);
+}
+
+.select-field--language {
+    background: transparent;
+
+    user-select: none;
+}
+
+.select-field--language .select-field-layout {
+    border: none;
+}
+
+.select-field--language .select-field-layout::after {
+    content: none;
+}
+
+.select-field--language .select-field-input {
+    max-width: 100%;
+}
+
+.select-field--language .select-control {
+    justify-content: center;
+    height: 4.5rem;
+}
+
+.select-field--language .select-control-text {
+    margin-right: 0.445em;
+    margin-left: 0.445em;
+    padding-top: 0.195em;
+    width: auto;
+    color: white;
+    text-align: center;
+    transition: 200ms ease-in;
+}
+
+.select-field--language:hover .select-control-text {
+    color: var(--hover-icon-color);
+}
+
+.select-field--language .select-field-layout:focus {
+    outline: var(--focused-control-outline);
+}
+
+/*.select-field--language .select-field-layout:focus:not(:focus-visible) {*/
+/*outline: none;*/
+/*}*/
+
+.select-field--language.select-field--focused .select-control-text {
+    color: var(--label-color);
+}
+
+.select-field--language .select-control .select-control-icon {
+    color: var(--button-success-color);
+    font-size: 0.75em;
+}
+
+.select-field--language .options-list {
+    border-top: none;
+}
+
+.select-field--language .options-list-item {
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .language-select {
+        width: 4em;
+        border: none;
+    }
+}
