@@ -18,6 +18,10 @@
 ## Introduction
 [Nordic Energy](https://www.nordicenergy.co) is developing the scalable public-private blockchain with deletable data features, made for commercial products. Designed with peer-to-peer energy trading use case, and co-innovated with SAP.
 
+## How it Works?
+
+<img src="/docs/how-it-works.png" alt="How it Works"/>
+
 This repository shows the frontend for the energy use case, which is the world's first peer to peer energy trading platform commercially available to a mass market. You can test it at https://powerchain.nordicenergy.co with the credentials demo / demo1234. The Frontend part of its trading platform is built with modern JavaScript, HTML and CSS, but there are some helpers: [React](https://reactjs.org/) as a framework, [Jest](https://jestjs.io/en/) as a testing tool and [Styleguidist](https://react-styleguidist.js.org/) as a source of documentation.
 
 There are several articles written by Nordic Energy Developers which describe the chosen approaches of development in full. Links to them can be found below:
