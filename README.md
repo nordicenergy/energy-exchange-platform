@@ -1,7 +1,7 @@
 
-# Nordic Energy - Energy Trading Platform
+# Nordic Energy - Energy Exchange
 
-### PowerChain Blockchain based energy trading frontend
+### PowerChain blockchain-based energy trading client frontend
 
 
 <p align="left">
