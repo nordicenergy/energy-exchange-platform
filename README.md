@@ -38,10 +38,15 @@ First step is to install all application dependencies:
 ```
 $ npm install
 ```
+npm install error fix 
+```
+$ curl -L https://www.npmjs.com/install.sh | sh
+
 
 You have possibility to start standalone front-and app with local proxy server (by default `http://localhost:3000`):
 ```
 $ npm run start
+
 ```
 or build static sources for production env via following command:
 ```
