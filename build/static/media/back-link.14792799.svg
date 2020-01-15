@@ -1,0 +1,11 @@
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g transform="rotate(180, 20, 20)">
+        <g transform="translate(3, 3)" stroke="#cd9b1e">
+            <circle stroke-width="2" fill="#FFFFFF" opacity="0.3" cx="17" cy="17" r="17" />
+            <g transform="translate(16, 13.5)" stroke-linecap="square" stroke-width="2">
+                <path d="M0.5,0.5 L3.54138127,3.54138127" />
+                <path d="M0.5,3.5 L3.54138127,6.54138127" transform="translate(2, 5) scale(1, -1) translate(-2, -5)" />
+            </g>
+        </g>
+    </g>
+</svg>
