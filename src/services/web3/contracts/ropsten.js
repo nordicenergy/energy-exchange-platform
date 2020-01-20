@@ -1,5 +1,5 @@
 const ropstenContract = {
-    address: '0x4f80f1254B8783dDd8f81d996605fe85780BfcB4',
+    address: '0x74240C144b8a1eC219d963C2F68e2680ac07E71B',
     abi: [
         {
             constant: true,

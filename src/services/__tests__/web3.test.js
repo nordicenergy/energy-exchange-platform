@@ -5,7 +5,7 @@ import ropstenContract from '../web3/contracts/ropsten';
 import liveContract from '../web3/contracts/live';
 import moment from 'moment';
 
-const ropstenAddresses = ['0x4f80f1254B8783dDd8f81d996605fe85780BfcB4'];
+const ropstenAddresses = ['0x74240C144b8a1eC219d963C2F68e2680ac07E71B'];
 const liveAddresses = ['0x1383b6EFe917e2BB5d80a55a8B1A81f360eD06bd'];
 
 describe('Web3 Service', () => {

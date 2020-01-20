@@ -33,7 +33,7 @@ describe('Transactions API Service', () => {
                                 detailsLink:
                                     'https://ropsten.etherscan.io/tx/0x4c6c11de80fa544341fc97fd4fb6755adbe6006a424f5a1029b632b7ce81ed25',
                                 energyAmount: 7.13,
-                                from: '0x4f80f1254B8783dDd8f81d996605fe85780BfcB4',
+                                from: '0x74240C144b8a1eC219d963C2F68e2680ac07E71B',
                                 id: 99,
                                 price: 2.7,
                                 producerID: 9,

@@ -7,7 +7,7 @@
     border-top: var(--border-width) solid var(--geyser-color);
     border-bottom: var(--border-width) solid var(--geyser-color);
     background: var(--producers-filter-bg-color);
-    color: #212121;
+    color: black;
     font-size: 1rem;
 }
 

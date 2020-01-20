@@ -4,7 +4,6 @@
 ### PowerChain blockchain-based energy trading client frontend
 
 
-
 <p align="left">
    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><br />
    <a href="https://codecov.io/gh/archik408/trading-platform-client"><img src="https://codecov.io/gh/archik408/trading-platform-client/branch/master/graph/badge.svg" alt="Codecov Badge"></a>
@@ -12,7 +11,7 @@
    <a href="https://bitbucket.org/nordicenergy/frontend/addon/pipelines/home#!/results/411"><img src="https://img.shields.io/badge/build-success-lightgreen.svg" alt="Test Coverage Badge"></a>
 </p>
 <p align="left">
-    <a href="https://twitter.com/intent/follow?screen_name=nordic_energy"><img src="https://img.shields.io/twitter/follow/Nordic_Energy.svg?style=social&label=Follow%20@Nordic_Energy" alt="Follow on Twitter"></a>  
+    <a href="https://twitter.com/intent/follow?screen_name=nordic_energy"><img src="https://img.shields.io/twitter/follow/Nordic_Energy.svg?style=social&label=Follow%20@Nordic_Energy" alt="Follow on Twitter"></a>
 </p>
 
 ## Introduction
@@ -29,7 +28,7 @@ There are several articles written by Nordic Energy Developers which describe th
 1. [React architecture and approach](https://medium.com/lnordicenergy-blog/powerchain-and-react-js-devblog-90843c9f1d10)
 2. [Layout](https://medium.com/nordicenergy-blog/layout-of-trading-platform-devblog)
 3. [Testing](https://medium.com/nordicenergy-blog/tests-docs-for-powerchain-frontend)
-  
+
 Besides, Nordic Energy has its own UI-kit which is currently under development, but it is also based on React and Styleguidist.
 
 
@@ -38,7 +37,7 @@ First step is to install all application dependencies:
 ```
 $ npm install
 ```
-npm install error fix 
+npm install error fix
 ```
 $ curl -L https://www.npmjs.com/install.sh | sh
 
@@ -138,11 +137,11 @@ All application web components must be described through interactive documentati
 Run standalone documentation via following command (by default `http://localhost:6060`):
 ```
 $ npm run styleguide
-``` 
+```
 
 or build static files: 
 ```
 $ npm run styleguide:build
-``` 
+```
 
 ![Docs Screen](./media/docs.png)

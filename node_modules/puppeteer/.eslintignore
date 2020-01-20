@@ -1,6 +1,0 @@
-third_party/*
-utils/doclint/check_public_api/test/
-utils/testrunner/examples/
-node6/*
-node6-test/*
-node6-testrunner/*

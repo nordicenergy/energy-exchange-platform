@@ -1,5 +1,5 @@
 const config = {
-    host: 'http://localhost:3000',
+    host: 'https://localhost:3000',
     credentials: {
         username: 'powerchainuser',
         password: 'powerchainpass1'
