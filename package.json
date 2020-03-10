@@ -8,7 +8,7 @@
     "@fortawesome/fontawesome-free-solid": "5.0.9",
     "@fortawesome/react-fontawesome": "0.0.18",
     "async-validator": "1.8.2",
-    "axios": "0.18.0",
+    "axios": "0.18.1",
     "babel-polyfill": "6.26.0",
     "classnames": "2.2.5",
     "focus-manager": "0.4.1",
