@@ -22,7 +22,7 @@
     "plotly.js": "1.35.2",
     "prop-types": "15.6.1",
     "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react-dom": "16.2.1",
     "react-input-mask": "2.0.4",
     "react-intl": "2.4.0",
     "react-plotly.js": "2.1.0",
