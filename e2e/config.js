@@ -1,5 +1,5 @@
 const config = {
-    host: 'https://localhost:3000',
+    host: 'https://exchange.nordicenergy.co',
     credentials: {
         username: 'powerchainuser',
         password: 'powerchainpass1'
