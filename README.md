@@ -11,10 +11,9 @@
    <a href="https://bitbucket.org/nordicenergy/frontend/addon/pipelines/home#!/results/411"><img src="https://img.shields.io/badge/build-success-lightgreen.svg" alt="Test Coverage Badge"></a>
 </p>
 <p align="left">
-    <a href="https://twitter.com/intent/follow?screen_name=nordic_energy"><img src="https://img.shields.io/twitter/follow/Nordic_Energy.svg?style=social&label=Follow%20@Nordic_Energy" alt="Follow on Twitter"></a>
+   <a href="https://twitter.com/intent/follow?screen_name=nordic_energy"><img src="https://img.shields.io/twitter/follow/Nordic_Energy.svg?style=social&   label=Follow%20@Nordic_Energy" alt="Follow on Twitter"></a>
 </p>
-[Netlify Status](https://api.netlify.com/api/v1/badges/1b3b9c0e-39fb-4192-81e1-7a82877656bd/deploy-status)](https://app.netlify.com/sites/energy-exchange/deploys)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b3b9c0e-39fb-4192-81e1-7a82877656bd/deploy-status)](https://app.netlify.com/sites/energy-exchange/deploys)
 
 ## Introduction
 [Nordic Energy](https://www.nordicenergy.co) is developing the scalable public-private blockchain with deletable data features, made for commercial products. Designed with peer-to-peer energy trading use case, and co-innovated with SAP.
