@@ -1,9 +1,7 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nordicenergy/energy-exchange-platform)
+# Nordic Energy - Energy Exchange
 
+### PowerChain blockchain-based energy trading client frontend
 
-# Energy Exchange Platform
-
-### Nordic Energy´s PowerChain, Energy Use Case Trading Client UI
 
 
 <p align="left">
@@ -13,7 +11,7 @@
    <a href="https://bitbucket.org/nordicenergy/frontend/addon/pipelines/home#!/results/411"><img src="https://img.shields.io/badge/build-success-lightgreen.svg" alt="Test Coverage Badge"></a>
 </p>
 <p align="left">
-   <a href="https://twitter.com/intent/follow?screen_name=nordic_energy"><img src="https://img.shields.io/twitter/follow/Nordic_Energy.svg?style=social&   label=Follow%20@Nordic_Energy" alt="Follow on Twitter"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=nordic_energy"><img src="https://img.shields.io/twitter/follow/Nordic_Energy.svg?style=social&label=Follow%20@Nordic_Energy" alt="Follow on Twitter"></a>  
 </p>
 
 ## Introduction
@@ -30,7 +28,7 @@ There are several articles written by Nordic Energy Developers which describe th
 1. [React architecture and approach](https://medium.com/lnordicenergy-blog/powerchain-and-react-js-devblog-90843c9f1d10)
 2. [Layout](https://medium.com/nordicenergy-blog/layout-of-trading-platform-devblog)
 3. [Testing](https://medium.com/nordicenergy-blog/tests-docs-for-powerchain-frontend)
-
+  
 Besides, Nordic Energy has its own UI-kit which is currently under development, but it is also based on React and Styleguidist.
 
 
@@ -39,15 +37,10 @@ First step is to install all application dependencies:
 ```
 $ npm install
 ```
-npm install error fix
-```
-$ curl -L https://www.npmjs.com/install.sh | sh
-
 
 You have possibility to start standalone front-and app with local proxy server (by default `http://localhost:3000`):
 ```
 $ npm run start
-
 ```
 or build static sources for production env via following command:
 ```
@@ -139,25 +132,11 @@ All application web components must be described through interactive documentati
 Run standalone documentation via following command (by default `http://localhost:6060`):
 ```
 $ npm run styleguide
-```
+``` 
 
 or build static files: 
 ```
 $ npm run styleguide:build
-```
+``` 
 
 ![Docs Screen](./media/docs.png)
-
-
-## ⭐️ Show your support
-Please ⭐️ this repository if this project helped you!
-
-## Donation
-If you like this project, feel free to donate:
-* Bitcoin:  14GyqCEZXyeythb6B6Vu5DiBCMszFrBsp1
-* Litecoin: LSi7smGjLwAmihFLEtV7Lit9Mmbsds9Tin
-* Ripple: rE5DbPTbtYT6tKqfXMD8352tTpdNvFydxb
-* Tron: TFSx6BBFNdxXoJJrTEWGEekTmb1AwNEEca
-* Ethereum: 0x0A6f46F29e047EdcFdf7BF67fD1DcC418100beea
-* DAI: 0x3FcDF18672dF7079E3146C87502003fb7dB4fa38
-* Paypal: paypal.me/nordicenergy
