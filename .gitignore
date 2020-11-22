@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+
+# documenting
+/styleguide
+
+# testing
+/coverage
+jest_*
+
+# production
+/build
+
+# misc
+firefox_root
+.idea
+.parentlock
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
