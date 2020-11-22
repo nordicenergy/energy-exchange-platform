@@ -101,7 +101,7 @@
     },
     "proxy": {
         "/api": {
-            "target": "https://fe.exchange.nordicenergy.co",
+            "target": "https://exchange.nordicenergy.io",
             "changeOrigin": true
         }
     },
